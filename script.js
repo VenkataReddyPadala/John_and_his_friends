@@ -35,13 +35,12 @@ function addData() {
 }
 
 function removeAdmin() {
-  arr
-    .filter((emp) => emp.profession !== "admin")
-    .map((emp) => {
-      console.log(
-        `id : ${emp.id}, Name : ${emp.name}, Age : ${emp.age}, Profession : ${emp.profession}`
-      );
-    });
+  arr = arr.filter((emp) => emp.profession !== "admin");
+  arr.map((emp) => {
+    console.log(
+      `id : ${emp.id}, Name : ${emp.name}, Age : ${emp.age}, Profession : ${emp.profession}`
+    );
+  });
 }
 
 function concatenateArray() {
@@ -50,8 +49,8 @@ function concatenateArray() {
     { id: 6, name: "Suresh", age: "21", profession: "developer" },
     { id: 7, name: "Shanmukh", age: "29", profession: "analyst" },
   ];
-  let newArray = arr.concat(friends);
-  newArray.map((emp) => {
+  arr = arr.concat(friends);
+  arr.map((emp) => {
     console.log(
       `id : ${emp.id}, Name : ${emp.name}, Age : ${emp.age}, Profession : ${emp.profession}`
     );
